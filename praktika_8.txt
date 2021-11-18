@@ -1,0 +1,37 @@
+задача 1
+
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument('f',type=str)
+args=parser.parse_args()
+def number_stroki(name):
+    try:
+        with open(name, 'r') as file:
+        text=file.readline(10)
+    except IOError:
+        print('Файл не найден')
+    return text
+number_stroki(args.f)
+
+
+Задача 2
+
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument('f',type=str)
+parser.add_argument('s',type=str)
+args=parser.parse_args()
+try:
+    with open(args.f, 'r') as file1:
+        text1=file1.read()
+except IOError:
+    print('Файл не найден')
+try:
+    with open(args.s, 'r') as file2:
+        text2=file2.write(te)
+except IOError:
+    print('Файл не найден')
+tex3=text1+text2
+print(text3) 
+
+
